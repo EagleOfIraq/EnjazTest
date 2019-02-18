@@ -9,7 +9,7 @@ using System;
 
 namespace EnjazTest.Migrations
 {
-    [DbContext(typeof(BloggingContext))]
+    [DbContext(typeof(JobsContext))]
     partial class BloggingContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

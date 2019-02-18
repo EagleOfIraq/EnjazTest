@@ -9,7 +9,7 @@ using System;
 
 namespace EnjazTest.Migrations
 {
-    [DbContext(typeof(BloggingContext))]
+    [DbContext(typeof(JobsContext))]
     [Migration("20190217144221_initt")]
     partial class initt
     {

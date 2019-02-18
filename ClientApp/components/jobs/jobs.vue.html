@@ -1,8 +1,10 @@
 <template>
     <div>
         <h1>jobs</h1>
-
         <p>This component demonstrates jobs from the server.</p>
+        <input  v-model="title" placeholder="title">
+        <input  v-model="description" placeholder="description">
+        <button @click="search">search</button>
 
         <table v-if="jobs.length" class="table">
             <thead>
@@ -20,9 +22,7 @@
                 </tr>
             </tbody>
         </table>
-
         <p v-else><em>Loading...</em></p>
     </div>
 </template>
-
 <script src="./jobs.ts"></script>

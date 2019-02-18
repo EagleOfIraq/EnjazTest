@@ -25,16 +25,27 @@ interface Job {
 @Component
 export default class JobsComponent extends Vue {
     jobs: Job[] = [];
-
+    key :string;
+    title :string;
+    description :string;
     mounted() {
         fetch('api/Job/jobs')
             .then(response => {
-                    console.log(response);
                     return response.json() as Promise<Job[]>
                 }
             )
             .then(data => {
-                console.log();
+                this.jobs = data;
+            });
+    }
+
+    search() {
+        fetch('api/Job/search?title='+this.description+"&description="+this.description)
+            .then(response => {
+                    return response.json() as Promise<Job[]>
+                }
+            )
+            .then(data => {
                 this.jobs = data;
             });
     }

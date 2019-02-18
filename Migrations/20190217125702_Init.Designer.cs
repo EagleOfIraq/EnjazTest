@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 namespace EnjazTest.Migrations
 {
-    [DbContext(typeof(BloggingContext))]
+    [DbContext(typeof(JobsContext))]
     [Migration("20190217125702_Init")]
     partial class Init
     {

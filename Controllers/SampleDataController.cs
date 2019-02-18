@@ -18,7 +18,7 @@ namespace EnjazTest.Controllers
         [HttpGet("[action]")]
         public List<WeatherForecast> WeatherForecasts()
         {
-            using (var db = new BloggingContext())
+            using (var db = new JobsContext())
             {
                 var rng = new Random();
                 for (int i = 0; i < 10; i++)
@@ -34,18 +34,5 @@ namespace EnjazTest.Controllers
                 return db.WeatherForecasts.ToList();
             }
         }
-//
-//        [HttpGet("[action]")]
-//        public IEnumerable<WeatherForecast> WeatherForecasts()
-//        {
-//            var rng = new Random();
-//            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-//            {
-//                DateFormatted = DateTime.Now.AddDays(index).ToString("d"),
-//                TemperatureC = rng.Next(-20, 55),
-//                Summary = Summaries[rng.Next(Summaries.Length)]
-//            });
-//        }
-
     }
 }

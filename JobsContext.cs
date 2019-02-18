@@ -5,7 +5,7 @@ using WebApplication1.Models;
 
 namespace EnjazTest
 {
-    public class BloggingContext : DbContext
+    public class JobsContext : DbContext
     {
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Company> Companies { get; set; }
