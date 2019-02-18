@@ -7,7 +7,7 @@ interface Company {
     url: string;
     location: string;
     logoUrl: string;
-    jobs :Job[];
+    jobs: Job[];
 }
 
 
@@ -24,13 +24,18 @@ interface Job {
 
 @Component
 export default class JobsComponent extends Vue {
-    forecasts: Job[] = [];
+    jobs: Job[] = [];
 
     mounted() {
-        fetch('api/Jobs/')
-            .then(response => response.json() as Promise<Job[]>)
+        fetch('api/Job/jobs')
+            .then(response => {
+                    console.log(response);
+                    return response.json() as Promise<Job[]>
+                }
+            )
             .then(data => {
-                this.forecasts = data;
+                console.log();
+                this.jobs = data;
             });
     }
 }

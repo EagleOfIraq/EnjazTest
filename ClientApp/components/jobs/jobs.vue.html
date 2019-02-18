@@ -1,24 +1,22 @@
 <template>
     <div>
-        <h1>Weather forecast</h1>
+        <h1>jobs</h1>
 
-        <p>This component demonstrates fetching data from the server.</p>
+        <p>This component demonstrates jobs from the server.</p>
 
-        <table v-if="forecasts.length" class="table">
+        <table v-if="jobs.length" class="table">
             <thead>
                 <tr>
-                    <th>Date</th>
-                    <th>Temp. (C)</th>
-                    <th>Temp. (F)</th>
-                    <th>Summary</th>
+                    <th>title</th>
+                    <th>type</th>
+                    <th>description</th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in forecasts">
-                    <td>{{ item.dateFormatted }}</td>
-                    <td>{{ item.temperatureC }}</td>
-                    <td>{{ item.temperatureF }}</td>
-                    <td>{{ item.summary }}</td>
+                <tr v-for="item in jobs">
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.type }}</td>
+                    <td>{{ item.description }}</td>
                 </tr>
             </tbody>
         </table>
@@ -27,4 +25,4 @@
     </div>
 </template>
 
-<script src="./fetchdata.ts"></script>
+<script src="./jobs.ts"></script>
