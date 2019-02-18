@@ -18,7 +18,6 @@ namespace EnjazTest.Controllers
         [HttpGet("[action]")]
         public List<WeatherForecast> WeatherForecasts()
         {
-            var res = "";
             using (var db = new BloggingContext())
             {
                 var rng = new Random();
@@ -34,8 +33,6 @@ namespace EnjazTest.Controllers
                 db.SaveChanges();
                 return db.WeatherForecasts.ToList();
             }
-
-            return null;
         }
 //
 //        [HttpGet("[action]")]
