@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\eagle\.Rider2018.2\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\eagle\.Rider2018.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\eagle\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\eagle\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_EnjazTest.-1593180451.00" t="ExcludeRecursive" />
+    <e p="C:\Users\eagle\RiderProjects\EnjazTest" t="IncludeRecursive">
+      <e p=".gitignore" t="Include" />
+      <e p=".vs" t="Include">
+        <e p="config" t="Include">
+          <e p="applicationhost.config" t="Include" />
+        </e>
+        <e p="EnjazTest" t="Include">
+          <e p="v15" t="Include">
+            <e p=".suo" t="Include" />
+            <e p="Server" t="Include">
+              <e p="sqlite3" t="Include">
+                <e p="db.lock" t="Include" />
+                <e p="storage.ide" t="Include" />
+                <e p="storage.ide-shm" t="Include" />
+                <e p="storage.ide-wal" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="AppSettings.cs" t="Include" />
+      <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
+      <e p="Bin" t="ExcludeRecursive" />
+      <e p="ClientApp" t="Include">
+        <e p="boot.ts" t="Include" />
+        <e p="components" t="Include">
+          <e p="app" t="Include">
+            <e p="app.ts" t="Include" />
+            <e p="app.vue.html" t="Include" />
+          </e>
+          <e p="counter" t="Include">
+            <e p="counter.ts" t="Include" />
+            <e p="counter.vue.html" t="Include" />
+          </e>
+          <e p="fetchdata" t="Include">
+            <e p="fetchdata.ts" t="Include" />
+            <e p="fetchdata.vue.html" t="Include" />
+          </e>
+          <e p="home" t="Include">
+            <e p="home.vue.html" t="Include" />
+          </e>
+          <e p="jobs" t="Include">
+            <e p="jobs.ts" t="Include" />
+            <e p="jobs.vue.html" t="Include" />
+          </e>
+          <e p="navmenu" t="Include">
+            <e p="navmenu.css" t="Include" />
+            <e p="navmenu.vue.html" t="Include" />
+          </e>
+        </e>
+        <e p="css" t="Include">
+          <e p="site.css" t="Include" />
+        </e>
+      </e>
+      <e p="Controllers" t="Include">
+        <e p="HomeController.cs" t="Include" />
+        <e p="JobController.cs" t="Include" />
+        <e p="SampleDataController.cs" t="Include" />
+        <e p="UsersController.cs" t="Include" />
+      </e>
+      <e p="data.json" t="Include" />
+      <e p="EnjazTest.csproj" t="IncludeRecursive" />
+      <e p="EnjazTest.sln" t="IncludeFlat" />
+      <e p="jobs.db" t="Include" />
+      <e p="JobsContext.cs" t="Include" />
+      <e p="Migrations" t="Include">
+        <e p="20190217125702_Init.cs" t="Include" />
+        <e p="20190217125702_Init.Designer.cs" t="Include" />
+        <e p="20190217144221_initt.cs" t="Include" />
+        <e p="20190217144221_initt.Designer.cs" t="Include" />
+        <e p="20190220120148_User.cs" t="Include" />
+        <e p="20190220120148_User.Designer.cs" t="Include" />
+        <e p="BloggingContextModelSnapshot.cs" t="Include" />
+      </e>
+      <e p="Models" t="Include">
+        <e p="company" t="Include">
+          <e p="Company.cs" t="Include" />
+          <e p="CompanyService.cs" t="Include" />
+          <e p="ICompanyService.cs" t="Include" />
+        </e>
+        <e p="job" t="Include">
+          <e p="IJobService.cs" t="Include" />
+          <e p="Job.cs" t="Include" />
+          <e p="JobService.cs" t="Include" />
+        </e>
+        <e p="user" t="Include">
+          <e p="IUserService.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+          <e p="UserService.cs" t="Include" />
+        </e>
+        <e p="WeatherForecast.cs" t="Include" />
+      </e>
+      <e p="node_modules" t="ExcludeRecursive">
+        <e p="@types" t="IncludeRecursive">
+          <e p="webpack-env" t="IncludeRecursive" />
+        </e>
+        <e p="aspnet-webpack" t="IncludeRecursive" />
+        <e p="awesome-typescript-loader" t="IncludeRecursive" />
+        <e p="bootstrap" t="IncludeRecursive" />
+        <e p="css-loader" t="IncludeRecursive" />
+        <e p="event-source-polyfill" t="IncludeRecursive" />
+        <e p="extract-text-webpack-plugin" t="IncludeRecursive" />
+        <e p="file-loader" t="IncludeRecursive" />
+        <e p="isomorphic-fetch" t="IncludeRecursive" />
+        <e p="jquery" t="IncludeRecursive" />
+        <e p="style-loader" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.dom.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.dom.iterable.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2015.collection.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2015.core.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2015.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2015.generator.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2015.iterable.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2015.promise.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2015.proxy.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2015.reflect.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2015.symbol.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2015.symbol.wellknown.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2016.array.include.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2016.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2016.full.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2017.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2017.full.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2017.object.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2017.sharedmemory.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es2017.string.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es5.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.es6.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.esnext.asynciterable.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.esnext.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.esnext.full.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.scripthost.d.ts" t="IncludeRecursive" />
+        <e p="typescript\lib\lib.webworker.d.ts" t="IncludeRecursive" />
+        <e p="url-loader" t="IncludeRecursive" />
+        <e p="vue" t="IncludeRecursive" />
+        <e p="vue-loader" t="IncludeRecursive" />
+        <e p="vue-material" t="IncludeRecursive" />
+        <e p="vue-property-decorator" t="IncludeRecursive" />
+        <e p="vue-router" t="IncludeRecursive" />
+        <e p="vue-template-compiler" t="IncludeRecursive" />
+        <e p="webpack" t="IncludeRecursive" />
+        <e p="webpack-hot-middleware" t="IncludeRecursive" />
+      </e>
+      <e p="npm-shrinkwrap.json" t="Include" />
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp2.2" t="Include">
+            <e p="EnjazTest.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="package.json" t="Include" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="launchSettings.json" t="Include" />
+      </e>
+      <e p="Startup.cs" t="Include" />
+      <e p="tsconfig.json" t="Include" />
+      <e p="Views" t="Include">
+        <e p="_ViewImports.cshtml" t="Include" />
+        <e p="_ViewStart.cshtml" t="Include" />
+        <e p="home" t="Include">
+          <e p="Index.cshtml" t="Include" />
+        </e>
+        <e p="Shared" t="Include">
+          <e p="_Layout.cshtml" t="Include" />
+          <e p="Error.cshtml" t="Include" />
+        </e>
+      </e>
+      <e p="webpack.config.js" t="Include" />
+      <e p="webpack.config.vendor.js" t="Include" />
+      <e p="wwwroot" t="Include">
+        <e p="dist" t="ExcludeRecursive">
+          <e p="89889688147bd7575d6327160d64e760.svg" t="Include" />
+          <e p="main.js" t="Include" />
+          <e p="main.js.map" t="Include" />
+          <e p="vendor-manifest.json" t="Include" />
+          <e p="vendor.css" t="Include" />
+          <e p="vendor.js" t="Include" />
+        </e>
+        <e p="favicon.ico" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>

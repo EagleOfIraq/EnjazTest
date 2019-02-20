@@ -25,11 +25,25 @@ interface Job {
 @Component
 export default class JobsComponent extends Vue {
     jobs: Job[] = [];
-    key :string;
-    title :string;
-    description :string;
+    jobTitle: string;
+    jobDescription: string;
+    title: string;
+    description: string;
+    requestHeaders: any;
+
     mounted() {
-        fetch('api/Job/jobs')
+        localStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTA2NjU3MzksImV4cCI6MTU1MTI3MDUzOSwiaWF0IjoxNTUwNjY1NzM5fQ.89RwgNmV6xbOl80IGg59OQhRKPyU0pji1zkrdutnqlE');
+        let token = localStorage.getItem('token');
+        this.requestHeaders = {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        };
+
+        fetch('api/Job/jobs', {
+            headers: this.requestHeaders,
+            method: 'GET',
+            // body: ''
+        })
             .then(response => {
                     return response.json() as Promise<Job[]>
                 }
@@ -40,13 +54,35 @@ export default class JobsComponent extends Vue {
     }
 
     search() {
-        fetch('api/Job/search?title='+this.description+"&description="+this.description)
+        fetch('api/Job/search?title=' + this.description + "&description=" + this.description, {
+            headers: this.requestHeaders,
+            method: 'GET',
+            // body: ''
+        })
             .then(response => {
                     return response.json() as Promise<Job[]>
                 }
             )
             .then(data => {
                 this.jobs = data;
+            });
+    }
+
+    add() {
+        fetch('api/Job/add', {
+            headers: this.requestHeaders,
+            method: 'POST',
+            body: JSON.stringify({
+                'title': this.jobTitle,
+                'description': this.jobDescription
+            })
+        })
+            .then(response => {
+                    return response.json() as Promise<Job>
+                }
+            )
+            .then(data => {
+                console.log(JSON.stringify(data))
             });
     }
 }

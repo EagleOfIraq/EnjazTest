@@ -1,3 +1,4 @@
+using EnjazTest.Models.company;
 using WebApplication1.Models;
 
 namespace EnjazTest.Models

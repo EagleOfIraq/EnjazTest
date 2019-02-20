@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
-namespace EnjazTest.Models
+namespace EnjazTest.Models.company
 {
     public class Company
     {
@@ -9,6 +10,6 @@ namespace EnjazTest.Models
         public string url { get; set; }
         public string location { get; set; }
         public string logoUrl { get; set; }
-        public List<Job> jobs { get; set; }
+        [JsonIgnore] public List<Job> jobs { get; set; }
     }
 }

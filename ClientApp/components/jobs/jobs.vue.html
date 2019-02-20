@@ -2,24 +2,32 @@
     <div>
         <h1>jobs</h1>
         <p>This component demonstrates jobs from the server.</p>
-        <input  v-model="title" placeholder="title">
-        <input  v-model="description" placeholder="description">
+        <input v-model="title" placeholder="title">
+        <input v-model="description" placeholder="description">
         <button @click="search">search</button>
+
+        <input v-model="jobTitle" placeholder="title">
+        <input v-model="jobDescription" placeholder="description">
+        <button @click="add">add</button>
 
         <table v-if="jobs.length" class="table">
             <thead>
-                <tr>
-                    <th>title</th>
-                    <th>type</th>
-                    <th>description</th>
-                </tr>
+            <tr>
+                <th>title</th>
+                <th>type</th>
+                <th>description</th>
+            </tr>
             </thead>
             <tbody>
-                <tr v-for="item in jobs">
-                    <td>{{ item.title }}</td>
-                    <td>{{ item.type }}</td>
-                    <td>{{ item.description }}</td>
-                </tr>
+            <tr v-for="item in jobs">
+                <td class="title">
+                    <h4>
+                        <a>{{item.title}}</a></h4>
+                    <p class="source">
+                        <a class="company">{{item.company.name}}</a>
+                        <strong class="fulltime">{{item.type}}</strong></p>
+                </td>
+            </tr>
             </tbody>
         </table>
         <p v-else><em>Loading...</em></p>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="jobs.db" uuid="a167cf37-03d9-4ef0-b20d-7b312671a860">
+    <data-source source="LOCAL" name="jobs.db" uuid="8e77dd36-ab4d-4371-9090-9b59b2a878b9">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Eagle\RiderProjects\EnjazTest\jobs.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\eagle\RiderProjects\EnjazTest\jobs.db</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>

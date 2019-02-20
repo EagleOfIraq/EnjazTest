@@ -3,39 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EnjazTest.Models;
+using EnjazTest.Models.job;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApplication1.Models;
 
 namespace EnjazTest.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     public class JobController : Controller
     {
-        [HttpGet("[action]")]
-        public List<Job> jobs()
+        private IJobService _jobService;
+
+        public JobController(IJobService jobService)
         {
-            using (var db = new JobsContext())
-            {
-//                for (int i = 0; i < 10; i++)
-//                {
-//                    db.Jobs.Add(new Job
-//                    {
-//                        title = "Job " + i,
-//                        type = 1,
-//                        description = "new job " + i
-//                    });
-//                }
-//                db.SaveChanges();
-                return db.Jobs.ToList();
-            }
+            _jobService = jobService;
         }
+
         [HttpGet("[action]")]
-        public List<Job> search(string title,string description)
+        public IActionResult jobs()
         {
-            using (var db = new JobsContext())
-            {
-                return db.Jobs.Where(c => c.title.Contains(title) || c.description.Contains(description)).ToList();
-            }
+            return Ok(_jobService.GetAll());
+        }
+
+        [HttpGet("[action]")]
+        public IActionResult search(string title, string description)
+        {
+            return Ok();
+        }
+
+        [HttpPost("[action]")]
+        public IActionResult add([FromBody] Job job)
+        {
+            return Ok(_jobService.add(job));
         }
     }
 }
