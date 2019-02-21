@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using EnjazTest.Models.company;
 using Microsoft.EntityFrameworkCore;
 
 namespace EnjazTest.Models.job

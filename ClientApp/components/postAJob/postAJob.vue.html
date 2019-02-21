@@ -1,0 +1,23 @@
+<template>
+    <div>
+        <h1>Post new jobs</h1>
+        <input v-model="jobTitle" placeholder="title">
+        <label>Full Time
+            <input type="checkbox" v-model="fullTime">
+        </label>
+        <label>Company
+            <select v-model="companyId">
+                <option value="0"> ---</option>
+                <option v-for="company in companies" v-bind="company.id">{{company.name}}</option>
+            </select>
+        </label>
+        <button @click="add">add</button>
+        <h2>Description</h2>
+        <div style="display: flex;margin: 10px">
+            <textarea placeholder="description" v-model='jobDescription'
+                      style="width: 50%;flex-grow: 1;padding: 5px"></textarea>
+            <div v-html='jobDescription' style="width: 50%; flex-grow: 1;padding: 10px"></div>
+        </div>
+    </div>
+</template>
+<script src="./postAJob.ts"></script>

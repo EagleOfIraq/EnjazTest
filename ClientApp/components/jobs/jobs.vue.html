@@ -6,10 +6,6 @@
         <input v-model="description" placeholder="description">
         <button @click="search">search</button>
 
-        <input v-model="jobTitle" placeholder="title">
-        <input v-model="jobDescription" placeholder="description">
-        <button @click="add">add</button>
-
         <table v-if="jobs.length" class="table">
             <thead>
             <tr>
@@ -22,12 +18,24 @@
             <tr v-for="item in jobs">
                 <td class="title">
                     <h4>
-                        <a>{{item.title}}</a></h4>
+                        <a :href="item.url">{{item.title}}</a></h4>
                     <p class="source">
-                        <a class="company">{{item.company.name}}</a>
-                        <strong class="fulltime">{{item.type}}</strong></p>
+                        <a :href="item.company.url" class="company">{{item.company.name}}</a>
+                        <strong v-if="item.type == 0" class="fulltime">Full Time</strong>
+                        <strong v-else="" class="fulltime">Part Time</strong><br>
+                    </p>
+                <td class="title">
+                </td>
+
+                <td class="meta">
+                    <span>{{item.company.location}}</span><br>
+                    <span>{{item.createdAt}}</span>
+                </td>
+                <td>
+                    <div  v-html='item.description' ></div>
                 </td>
             </tr>
+
             </tbody>
         </table>
         <p v-else><em>Loading...</em></p>

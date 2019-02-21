@@ -24,9 +24,11 @@ interface Job {
 
 @Component
 export default class JobsComponent extends Vue {
-    jobs: Job[] = [];
-    title: string;
-    description: string;
+    companies: Company[] = [];
+    companyId: string;
+    fullTime: any;
+    jobTitle: string;
+    jobDescription: string='';
     requestHeaders: any;
 
     mounted() {
@@ -37,38 +39,41 @@ export default class JobsComponent extends Vue {
             'Authorization': 'Bearer ' + token
         };
 
-        fetch('api/Job/jobs', {
+        fetch('api/Company/companies', {
             headers: this.requestHeaders,
             method: 'GET',
             // body: ''
         })
             .then(response => {
-                    return response.json() as Promise<Job[]>
+                    return response.json() as Promise<Company[]>
                 }
             )
             .then(data => {
-                this.jobs = data
+                this.companies = data;
             });
     }
 
-    search() {
-        fetch('api/Job/search?title=' + this.description + "&description=" + this.description, {
+    add() {
+        let company: Company;
+        company = this.companies.filter(company => company.name == this.companyId)[0];
+        if (company) alert(company.id + " " + this.fullTime)
+        else alert(0 + " " + this.fullTime)
+
+        fetch('api/Job/add', {
             headers: this.requestHeaders,
-            method: 'GET',
-            // body: ''
+            method: 'POST',
+            body: JSON.stringify({
+                'title': this.jobTitle,
+                'description': this.jobDescription,
+                'fullTime': this.fullTime ? 1 : 0,
+                'companyid': company.id,
+                'createdAt': new Date().getTime()
+            })
         })
-            .then(response => {
-                    return response.json() as Promise<Job[]>
-                }
-            )
+            .then(response => response.json() as Promise<Job>)
+            .catch(reason => console.log(reason))
             .then(data => {
-                data.forEach(job => {
-                    job.createdAt = " new Date(job.createdAt).toDateString()";
-                    console.log(job.createdAt);
-                    return job;
-                });
-                alert(data[0].createdAt);
-                this.jobs = data;
+                console.log(JSON.stringify(data))
             });
     }
 }

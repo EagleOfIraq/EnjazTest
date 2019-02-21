@@ -1,4 +1,6 @@
+using System.ComponentModel.DataAnnotations.Schema;
 using EnjazTest.Models.company;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using WebApplication1.Models;
 
 namespace EnjazTest.Models
@@ -16,6 +18,8 @@ namespace EnjazTest.Models
         public int type { get; set; }
         public string url { get; set; }
         public long createdAt { get; set; }
+//        [ForeignKey(nameof(Company.id))]
+        public long companyid { get; set; }
         public Company company { get; set; }
 
     }

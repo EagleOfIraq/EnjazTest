@@ -6,8 +6,7 @@ Vue.use(VueRouter);
 
 const routes = [
     { path: '/', component: require('./components/home/home.vue.html') },
-    { path: '/counter', component: require('./components/counter/counter.vue.html') },
-    { path: '/fetchdata', component: require('./components/fetchdata/fetchdata.vue.html') },
+    { path: '/postAJob', component: require('./components/postAJob/postAJob.vue.html') },
     { path: '/jobs', component: require('./components/jobs/jobs.vue.html') }
 ];
 
