@@ -1,0 +1,33 @@
+<template>
+    <div>
+        <h1>companies</h1>
+        <p>This component demonstrates jobs from the server.</p>
+        <input v-model="name" placeholder="name">
+        <input v-model="location" placeholder="location">
+        <button @click="add">Add</button>
+        <table v-if="companies.length" class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="item in companies">
+                <td class="title">
+                    <h4>
+                        <a :href="item.url">{{item.name}}</a>
+                    </h4>
+                </td>
+                <td class="title">
+                    <h3>{{item.location}}
+                    </h3>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+        <p v-else><em>Loading...</em></p>
+    </div>
+</template>
+<script src="./companies.ts"></script>

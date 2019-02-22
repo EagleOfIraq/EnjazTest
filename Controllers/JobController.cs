@@ -29,6 +29,12 @@ namespace EnjazTest.Controllers
         }
 
         [HttpGet("[action]")]
+        public IActionResult job([FromQuery] long jobId)
+        {
+            return Ok(_jobService.GetById(jobId));
+        }
+
+        [HttpGet("[action]")]
         public IActionResult search(string title, string description)
         {
             return Ok();

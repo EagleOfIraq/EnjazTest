@@ -6,5 +6,6 @@ namespace EnjazTest.Models.job
     {
         Job add(Job job);
         IEnumerable<Job> GetAll();
+        Job GetById(long jobId);
     }
 }

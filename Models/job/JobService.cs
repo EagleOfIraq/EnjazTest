@@ -19,6 +19,7 @@ namespace EnjazTest.Models.job
                 db.Jobs.Add(job);
                 db.SaveChanges();
             }
+
             return job;
         }
 
@@ -27,6 +28,15 @@ namespace EnjazTest.Models.job
             using (var db = new JobsContext())
             {
                 return db.Jobs.Include(c => c.company).ToList();
+            }
+        }
+
+        public Job GetById(long jobId)
+        {
+            using (var db = new JobsContext())
+            {
+                return db.Jobs.Include(c => c.company)
+                    .FirstOrDefault(c => c.id == jobId);
             }
         }
     }
