@@ -1,28 +1,21 @@
 <template>
     <div>
         <h1>jobs</h1>
-        <p>This component demonstrates jobs from the server.</p>
         <input v-model="title" placeholder="title">
         <input v-model="description" placeholder="description">
         <button @click="search">search</button>
 
         <table v-if="jobs.length" class="table">
             <thead>
-            <tr>
-                <th>title</th>
-                <th>type</th>
-                <th>description</th>
-            </tr>
+
             </thead>
             <tbody>
             <tr v-for="item in jobs">
                 <td class="title">
 
                     <router-link :to="'/job/'+ item.id">
-                        <a :href="item.url">{{item.title}}</a>
+                        <h3>{{item.title}}</h3>
                     </router-link>
-
-                    <h4><a :href="item.url">{{item.title}}</a></h4>
                     <p class="source">
                         <a :href="item.company.url" class="company">{{item.company.name}}</a>
                         <strong v-if="item.type == 0" class="fulltime">Full Time</strong>
@@ -34,9 +27,6 @@
                 <td class="meta">
                     <span>{{item.company.location}}</span><br>
                     <span>{{item.createdAt}}</span>
-                </td>
-                <td>
-                    <div v-html='item.description'></div>
                 </td>
             </tr>
 

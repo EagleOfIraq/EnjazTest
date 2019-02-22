@@ -1,0 +1,14 @@
+<template>
+    <div style="margin: 20px">
+        <p v-model="token"></p>
+        <div v-if="token">
+            <button @click="logout">logout</button>
+        </div>
+        <div v-else="">
+            <input v-model="UserName" placeholder="UserName">
+            <input v-model="Password" placeholder="Password">
+            <button @click="authenticate">Login</button>
+        </div>
+    </div>
+</template>
+<script src="./login.ts"></script>
